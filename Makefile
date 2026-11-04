@@ -7,8 +7,12 @@ CONTAINER := podman run --rm \
 	     -v "$(CURDIR):/workspace" \
 	     -w /workspace
 
-.PHONY: shell
+RUN := $(CONTAINER) $(IMAGE)
+
+.PHONY: shell audit
 
 shell:
 	$(CONTAINER) -it $(IMAGE) sh
 
+audit:
+	$(RUN) npm audit --audit-level=moderate
