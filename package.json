@@ -1,0 +1,8 @@
+{
+  "name": "@grausvera/unancha",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A library of resources to shape what you create"
+}
