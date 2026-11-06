@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+<title>unancha — tus ideas tienen muchas formas</title>
+<desc>El monograma u reúne capas abiertas de color. Identidad de una biblioteca que crece con lo que creas, en tema oscuro.</desc>
+<defs><linearGradient id="mark-violet" x1="32" y1="28" x2="139" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#7144df"/><stop offset="1" stop-color="#362071"/></linearGradient>
+<linearGradient id="mark-teal" x1="173" y1="47" x2="127" y2="159" gradientUnits="userSpaceOnUse"><stop stop-color="#31d8c8"/><stop offset="1" stop-color="#069caa"/></linearGradient>
+<linearGradient id="mark-pink" x1="158" y1="19" x2="122" y2="152" gradientUnits="userSpaceOnUse"><stop stop-color="#ff70ae"/><stop offset="1" stop-color="#de4c87"/></linearGradient>
+<linearGradient id="mark-gold" x1="139" y1="4" x2="121" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd856"/><stop offset="1" stop-color="#f4aa36"/></linearGradient>
+ <linearGradient id="gold" x1="710" y1="145" x2="831" y2="384" gradientUnits="userSpaceOnUse"><stop stop-color="#ffdc68"/><stop offset="1" stop-color="#efae39"/></linearGradient>
+ <linearGradient id="pink" x1="970" y1="95" x2="1111" y2="319" gradientUnits="userSpaceOnUse"><stop stop-color="#ff88bd"/><stop offset="1" stop-color="#e15192"/></linearGradient>
+ <linearGradient id="teal" x1="1050" y1="368" x2="1210" y2="569" gradientUnits="userSpaceOnUse"><stop stop-color="#45ddd0"/><stop offset="1" stop-color="#13a8b5"/></linearGradient>
+ <filter id="lift" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="16" stdDeviation="19" flood-color="#08030f" flood-opacity=".24"/></filter>
+</defs>
+<rect width="1280" height="720" fill="#191128"/>
+<path d="M894-53c253 2 431 122 452 364 22 255-112 432-371 461-256 28-396-134-370-363C625 224 665-55 894-53Z" fill="#241a38"/>
+<path d="M654 251c37-76 130-107 224-84 130 33 192 181 291 196" stroke="#453255" stroke-width="2" stroke-linecap="round"/>
+<path d="M645 491c122 143 374 195 552 28" stroke="#453255" stroke-width="2" stroke-linecap="round"/>
+<!-- Se conserva el logo de color y el nombre vectorial de la identidad aprobada. -->
+<g transform="translate(69 111) scale(.42)"><path d="M100 163 131 14Q134 1 147 4l23 6q13 3 9 17l-29 116q-7 26-50 20Z" fill="url(#mark-gold)"/>
+<path d="m101 165 48-131q5-13 18-8l23 9q13 5 7 18l-42 99q-13 22-54 13Z" fill="url(#mark-pink)"/>
+<path d="m103 165 66-112q7-12 19-5l20 12q12 7 4 19l-54 75q-15 20-55 11Z" fill="url(#mark-teal)"/>
+<path d="M24 39q0-15 15-15h7q15 0 15 15v67c0 29 45 29 45 0V39q0-15 15-15h7q15 0 15 15v69c0 71-119 71-119 0Z" fill="url(#mark-violet)"/>
+<path d="M32 42v66c0 24 14 42 35 49" fill="none" stroke="#a27bed" stroke-opacity=".48" stroke-width="3" stroke-linecap="round"/></g>
+<g transform="translate(183 145) scale(.82)" color="#f1eaff"><g fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0v35q0 25 22 25t22-25V0" transform="translate(0 0)"/><path d="M0 60V0m0 23q0-23 22-23t22 23v37" transform="translate(66 0)"/><path d="M44 0v60m0-30q0-30-22-30T0 30t22 30t22-30" transform="translate(132 0)"/><path d="M0 60V0m0 23q0-23 22-23t22 23v37" transform="translate(198 0)"/><path d="M44 5Q0-16 0 30t44 25" transform="translate(264 0)"/><path d="M0-30v90m0-37q0-23 22-23t22 23v37" transform="translate(329 0)"/><path d="M44 0v60m0-30q0-30-22-30T0 30t22 30t22-30" transform="translate(395 0)"/></g></g>
+<text x="76" y="317" font-family="sans-serif" font-size="48" font-weight="600" letter-spacing="-1.6" fill="#f1eaff">Tus ideas tienen</text>
+<text x="76" y="375" font-family="sans-serif" font-size="48" font-weight="600" letter-spacing="-1.6" fill="#f1eaff">muchas formas</text>
+<text x="79" y="435" font-family="sans-serif" font-size="22" fill="#b6a5cc">Una biblioteca para darles vida</text>
+<!-- Las capas abstractas representan posibilidades; no enumeran categorías. -->
+<g transform="rotate(-17 779 287)" filter="url(#lift)">
+ <rect x="697" y="158" width="164" height="253" rx="35" fill="url(#gold)"/>
+ <rect x="716" y="178" width="126" height="215" rx="22" stroke="#fff5d0" stroke-opacity=".6" stroke-width="2"/>
+ <path d="M742 209h42m-42 16h66" stroke="#fff5d0" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+</g>
+<g transform="rotate(14 1035 242)" filter="url(#lift)">
+ <rect x="966" y="108" width="142" height="269" rx="34" fill="url(#pink)"/>
+ <path d="M988 144h91v195h-91Z" stroke="#ffd5e7" stroke-opacity=".45" stroke-width="2"/>
+ <circle cx="1033" cy="183" r="20" stroke="#ffe4f0" stroke-opacity=".7" stroke-width="3"/>
+</g>
+<g transform="rotate(26 1118 466)" filter="url(#lift)">
+ <rect x="1048" y="362" width="147" height="220" rx="34" fill="url(#teal)"/>
+ <path d="M1068 391h105m-105 18h105m-105 18h105" stroke="#cbfff5" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- Logo principal de color, idéntico al recurso unancha-mark.svg. -->
+<g transform="translate(715 260) scale(1.98)" filter="url(#lift)"><path d="M100 163 131 14Q134 1 147 4l23 6q13 3 9 17l-29 116q-7 26-50 20Z" fill="url(#mark-gold)"/>
+<path d="m101 165 48-131q5-13 18-8l23 9q13 5 7 18l-42 99q-13 22-54 13Z" fill="url(#mark-pink)"/>
+<path d="m103 165 66-112q7-12 19-5l20 12q12 7 4 19l-54 75q-15 20-55 11Z" fill="url(#mark-teal)"/>
+<path d="M24 39q0-15 15-15h7q15 0 15 15v67c0 29 45 29 45 0V39q0-15 15-15h7q15 0 15 15v69c0 71-119 71-119 0Z" fill="url(#mark-violet)"/>
+<path d="M32 42v66c0 24 14 42 35 49" fill="none" stroke="#a27bed" stroke-opacity=".48" stroke-width="3" stroke-linecap="round"/></g>
+<path d="m1169 204 5 16 16 5-16 5-5 16-5-16-16-5 16-5Z" fill="#f5c45d"/>
+<circle cx="687" cy="463" r="6" fill="#a782dc"/><circle cx="1172" cy="631" r="5" fill="#44c9bc"/>
+<g transform="translate(79 535)">
+ <path d="M0 0h35" stroke="#8058cd" stroke-width="8" stroke-linecap="round"/>
+ <path d="M52 0h16" stroke="#f078ac" stroke-width="8" stroke-linecap="round"/>
+ <path d="M85 0h7" stroke="#21bfb5" stroke-width="8" stroke-linecap="round"/>
+</g>
+</svg>
