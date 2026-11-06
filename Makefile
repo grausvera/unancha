@@ -9,7 +9,7 @@ CONTAINER := podman run --rm \
 
 RUN := $(CONTAINER) $(IMAGE)
 
-.PHONY: shell audit check
+.PHONY: shell audit check pack
 
 shell:
 	$(CONTAINER) -it $(IMAGE) sh
@@ -19,3 +19,6 @@ audit:
 
 check:
 	$(RUN) npm test
+
+pack:
+	$(RUN) sh -c 'mkdir -p dist && npm pack --ignore-scripts --pack-destination dist'

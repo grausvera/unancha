@@ -7,9 +7,18 @@
   "description": "A library of resources to shape what you create",
   "exports": {
     ".": "./src/index.js",
-    "./catalogue": "./src/index.js"
+    "./catalogue": "./src/index.js",
+    "./assets/*": "./assets/*"
   },
   "scripts": {
     "test": "node --test test/*.test.js"
-  }
+  },
+  "files": [
+    "assets",
+    "src",
+    "third-party",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ]
 }

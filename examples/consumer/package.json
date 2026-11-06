@@ -1,0 +1,8 @@
+{
+  "name": "unancha-consumer",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@grausvera/unancha": "file:../../dist/grausvera-unancha-0.1.0.tgz"
+  }
+}
