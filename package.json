@@ -4,5 +4,12 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "description": "A library of resources to shape what you create"
+  "description": "A library of resources to shape what you create",
+  "exports": {
+    ".": "./src/index.js",
+    "./catalogue": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
 }

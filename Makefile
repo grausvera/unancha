@@ -9,10 +9,13 @@ CONTAINER := podman run --rm \
 
 RUN := $(CONTAINER) $(IMAGE)
 
-.PHONY: shell audit
+.PHONY: shell audit check
 
 shell:
 	$(CONTAINER) -it $(IMAGE) sh
 
 audit:
 	$(RUN) npm audit --audit-level=moderate
+
+check:
+	$(RUN) npm test
