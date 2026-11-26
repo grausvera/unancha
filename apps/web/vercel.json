@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "corepack pnpm install --frozen-lockfile",
-  "buildCommand": "corepack pnpm --filter @grausvera/unancha build && corepack pnpm build"
+  "installCommand": "npm exec --yes --package=\"$(node -p 'require(\"../../package.json\").packageManager')\" -- pnpm install --frozen-lockfile",
+  "buildCommand": "npm exec --yes --package=\"$(node -p 'require(\"../../package.json\").packageManager')\" -- sh -ec 'pnpm --filter @grausvera/unancha build && pnpm build'"
 }

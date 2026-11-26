@@ -2,6 +2,7 @@
   "name": "@grausvera/unancha-web",
   "private": true,
   "type": "module",
+  "engines": { "node": "26.x" },
   "scripts": {
     "build": "node tooling/copy-previews.mjs && next build",
     "dev": "node tooling/copy-previews.mjs && next dev --hostname 0.0.0.0",
