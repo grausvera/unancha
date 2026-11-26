@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -40 459 110" fill="none">
+  <title>unancha</title>
+  <g stroke="#f5f5f7" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0v35q0 25 22 25t22-25V0" transform="translate(0 0)"/>
+    <path d="M0 60V0m0 23q0-23 22-23t22 23v37" transform="translate(66 0)"/>
+    <path d="M44 0v60m0-30q0-30-22-30T0 30t22 30t22-30" transform="translate(132 0)"/>
+    <path d="M0 60V0m0 23q0-23 22-23t22 23v37" transform="translate(198 0)"/>
+    <path d="M44 5Q0-16 0 30t44 25" transform="translate(264 0)"/>
+    <path d="M0-30v90m0-37q0-23 22-23t22 23v37" transform="translate(329 0)"/>
+    <path d="M44 0v60m0-30q0-30-22-30T0 30t22 30t22-30" transform="translate(395 0)"/>
+  </g>
+</svg>

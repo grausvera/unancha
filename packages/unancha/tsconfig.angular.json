@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Emite la entrada Angular aparte para que el enlazador del consumidor complete la compilación.
+    "rootDir": "src/generated/angular",
+    "outDir": "dist/angular",
+    "experimentalDecorators": true
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "partial",
+    "strictTemplates": true
+  },
+  "include": ["src/generated/angular"],
+  "exclude": []
+}

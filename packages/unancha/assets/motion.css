@@ -1,0 +1,27 @@
+.unancha-icon-spin,
+.unancha-icon-pulse {
+  transform-origin: center;
+}
+
+.unancha-icon-spin {
+  animation: unancha-icon-spin 1.5s linear infinite;
+}
+
+.unancha-icon-pulse {
+  animation: unancha-icon-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes unancha-icon-spin {
+  to { transform: rotate(1turn); }
+}
+
+@keyframes unancha-icon-pulse {
+  50% { transform: scale(.8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unancha-icon-spin,
+  .unancha-icon-pulse {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3.1" y="5.45" width="11" height="2.6" rx="0.8" fill="currentColor" stroke="none" transform="matrix(0.987993 0 0 0.995998 0.03724 0.208131)" />
+  <rect x="7.5" y="3.2" width="2.6" height="3.35" rx="0.75" fill="currentColor" stroke="none" transform="matrix(0.987993 0 0 0.995998 0.03724 0.208131)" />
+  <path d="M10.15 7.5h2.6c-.28 4.05-3.36 7.45-7.35 9.55a1.16 1.16 0 0 1-1.1-2.04q4.91-2.75 5.85-7.51ZM5.65 9.35q.96-.38 1.43.64.96 1.88 2.23 2.78l-1.55 1.64q-1.75-1.15-2.72-3.52-.47-1.14.61-1.54Z" fill="currentColor" stroke="none" transform="matrix(0.987993 0 0 0.995998 0.03724 0.208131)" />
+  <path d="M11.2 19.55l3.44-8.19q.35-.82 1.24-.82h.62q.9 0 1.24.82l3.44 8.19q.5 1.22-.78 1.22h-.53q-.69 0-.94-.62l-.68-1.65h-4.01l-.66 1.65q-.25.62-.94.62h-.65q-1.27 0-.79-1.22ZM17.19 16.5L15.3 16.5Q15 16.5 15.12 16.22L16.14 13.78Q16.26 13.5 16.37 13.78L17.38 16.22Q17.49 16.5 17.19 16.5Z" fill="currentColor" stroke="none" fill-rule="evenodd" transform="matrix(0.987993 0 0 0.995998 0.03724 0.208131)" />
+</svg>

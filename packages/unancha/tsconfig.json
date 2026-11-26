@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // Emite ESM y declaraciones para consumidores de Node y de bundlers.
+    "module": "NodeNext",
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "noEmitOnError": true,
+    "verbatimModuleSyntax": true,
+    "types": []
+  },
+  "include": ["src"],
+  "exclude": ["src/generated/angular"]
+}

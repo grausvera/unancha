@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="5.6" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(0 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(45 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(90 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(135 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(180 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(225 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(270 12 12)" />
+  <path d="M10.8 4.9l.38-2.32q.13-.55.82-.55t.82.55l.38 2.32q.1.65-.55.65h-1.3q-.65 0-.55-.65Z" fill="currentColor" stroke="none" transform="matrix(1.013323 0 0 1.013323 -0.159875 -0.159875) rotate(315 12 12)" />
+</svg>

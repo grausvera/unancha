@@ -1,0 +1,4 @@
+# Reúne los paquetes del proyecto y permite ejecutar sus tareas desde la raíz.
+packages:
+  - packages/*
+  - apps/*

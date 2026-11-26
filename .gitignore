@@ -1,0 +1,20 @@
+# Dependencias instaladas y artefactos regenerables.
+node_modules/
+dist/
+**/src/generated/
+*.tgz
+/artifacts/
+/.pnpm-store/
+.next/
+next-env.d.ts
+/apps/web/public/previews/
+
+# Configuración local y salidas del editor o del compilador.
+.env
+.env.*
+!.env.example
+/.aws/
+.vercel/
+*.tsbuildinfo
+*.log
+.DS_Store

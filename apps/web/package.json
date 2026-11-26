@@ -1,0 +1,21 @@
+{
+  "name": "@grausvera/unancha-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tooling/copy-previews.mjs && next build",
+    "dev": "node tooling/copy-previews.mjs && next dev --hostname 0.0.0.0",
+    "start": "next start --hostname 0.0.0.0"
+  },
+  "dependencies": {
+    "@grausvera/unancha": "workspace:*",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "19.2.14",
+    "typescript": "6.0.3"
+  }
+}

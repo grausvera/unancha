@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3.1" y="5.55" width="17.8" height="1.9" rx="0.9" fill="currentColor" stroke="none" transform="matrix(1.0 0 0 1.077154 0.0 -0.925852)" />
+  <rect x="3.1" y="11.05" width="17.8" height="1.9" rx="0.9" fill="currentColor" stroke="none" transform="matrix(1.0 0 0 1.077154 0.0 -0.925852)" />
+  <rect x="3.1" y="16.55" width="17.8" height="1.9" rx="0.9" fill="currentColor" stroke="none" transform="matrix(1.0 0 0 1.077154 0.0 -0.925852)" />
+  <path d="M8.05 4.2H9.15A1.1 1.1 0 0 1 10.25 5.3V7.7A1.1 1.1 0 0 1 9.15 8.8H8.05A1.1 1.1 0 0 1 6.95 7.7V5.3A1.1 1.1 0 0 1 8.05 4.2ZM14.95 9.7H16.05A1.1 1.1 0 0 1 17.15 10.8V13.2A1.1 1.1 0 0 1 16.05 14.3H14.95A1.1 1.1 0 0 1 13.85 13.2V10.8A1.1 1.1 0 0 1 14.95 9.7ZM9.95 15.2H11.05A1.1 1.1 0 0 1 12.15 16.3V18.7A1.1 1.1 0 0 1 11.05 19.8H9.95A1.1 1.1 0 0 1 8.85 18.7V16.3A1.1 1.1 0 0 1 9.95 15.2Z" fill="currentColor" stroke="none" transform="matrix(1.0 0 0 1.077154 0.0 -0.925852)" />
+</svg>
