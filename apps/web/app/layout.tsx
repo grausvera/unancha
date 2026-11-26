@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <a className="skip-link" href="#content">Saltar al contenido</a>
         <header className="site-header">
           <div className="page-width header-content">
-            <Link className="brand-link" href="/" aria-label="Unancha, inicio">
+            <Link className="brand-link" href="/" prefetch={true} aria-label="Unancha, inicio">
               <img className="brand-logo-dark" src="/unancha-mark.svg" width="32" height="32" alt="" />
             </Link>
             <PlatformNav />

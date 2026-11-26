@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link, { useLinkStatus } from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowRight, BookOpen, Compass, Menu, PenTool, X } from "@grausvera/unancha/icons";
@@ -10,6 +10,13 @@ const sections = [
   { href: "/studio", label: "Estudio", Icon: PenTool },
   { href: "/docs", label: "Documentación", Icon: BookOpen },
 ] as const;
+
+/** Señala en la cabecera una navegación que aún espera la respuesta de Next.js. */
+function NavigationProgress() {
+  const { pending } = useLinkStatus();
+
+  return pending ? <span className="navigation-pending" aria-hidden="true" /> : null;
+}
 
 /** Señala el área actual también al navegar por las fichas del Explorador. */
 export function PlatformNav() {
@@ -91,19 +98,28 @@ export function PlatformNav() {
       <div id="platform-menu" className="platform-menu" data-open={menuOpen}>
         <nav className="platform-nav" aria-label="Navegación principal">
           {sections.map(({ href, label, Icon }) => (
-            <Link key={href} href={href} onClick={() => setOpenPath(null)} aria-current={area === href ? "location" : undefined}>
+            <Link
+              key={href}
+              href={href}
+              prefetch={true}
+              onClick={() => setOpenPath(null)}
+              aria-current={area === href ? "location" : undefined}
+            >
               <Icon aria-hidden="true" />
               <span>{label}</span>
+              <NavigationProgress />
             </Link>
           ))}
         </nav>
         <div className="header-actions">
           <Link className="header-secondary-link" href="/explorer" onClick={() => setOpenPath(null)}>
             341 iconos
+            <NavigationProgress />
           </Link>
           <Link className="header-cta" href={action.href} aria-label={action.label} onClick={() => setOpenPath(null)}>
             <span>{action.label}</span>
             <ArrowRight />
+            <NavigationProgress />
           </Link>
         </div>
       </div>
