@@ -10,13 +10,13 @@ const config: NextConfig = {
         headers: [
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
           { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
       {
         source: "/previews/:path*",
         headers: [
+          { key: "X-Frame-Options", value: "DENY" },
           { key: "Content-Security-Policy", value: "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'; sandbox" },
           { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
         ],

@@ -3,6 +3,11 @@ import { NextResponse, type NextRequest } from "next/server";
 import { siteIsIndexable } from "./app/lib/site-metadata";
 
 const devMode = process.env.NODE_ENV === "development";
+// Solo Grausvera y su Preview de staging pueden mostrar las páginas en un marco.
+const frameAncestors = [
+  "https://grausvera.com",
+  "https://grausvera-git-staging-grausvera.vercel.app",
+].join(" ");
 
 /** Entrega a Next y al navegador el mismo nonce para los scripts de cada documento. */
 export function proxy(request: NextRequest) {
@@ -17,7 +22,7 @@ export function proxy(request: NextRequest) {
     `connect-src 'self'${devMode ? " ws: wss:" : ""}`,
     "object-src 'none'",
     "base-uri 'none'",
-    "frame-ancestors 'none'",
+    `frame-ancestors ${frameAncestors}`,
     "form-action 'self'",
   ].join("; ");
 
