@@ -1,0 +1,25 @@
+name: Production pull request policy
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, edited]
+
+permissions: {}
+
+jobs:
+  check-staging-source:
+    name: Staging source for main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check pull request source
+        shell: bash
+        env:
+          SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          SOURCE_BRANCH: ${{ github.head_ref }}
+        run: |
+          # Comprueba el repositorio y la rama sin ejecutar código del pull request.
+          if [[ "$SOURCE_REPOSITORY" != "$GITHUB_REPOSITORY" || "$SOURCE_BRANCH" != "staging" ]]; then
+            printf '%s\n' 'Pull requests to main must come from the staging branch of this repository.' >&2
+            exit 1
+          fi
