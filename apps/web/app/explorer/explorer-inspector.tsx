@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { memo, useEffect, useRef, useState, type CSSProperties, type Dispatch, type RefObject, type SetStateAction } from "react";
 import { Check, Copy, Download, ExternalLink, X } from "@grausvera/unancha/icons";
 import { ColorPickerControls } from "../components/color-picker-controls";
@@ -30,6 +31,7 @@ type ExplorerInspectorProps = {
 export const ExplorerInspector = memo(function ExplorerInspector({
   selected, panelRef, copiedKey, setCopiedKey, copyText, onClose,
 }: ExplorerInspectorProps) {
+  const router = useRouter();
   // Estado independiente exclusivo del panel de vista previa (no se ve afectado por la barra global de Explorer).
   const [previewFilled, setPreviewFilled] = useState(false);
   const [previewSize, setPreviewSize] = useState<number>(24);
@@ -86,6 +88,7 @@ export const ExplorerInspector = memo(function ExplorerInspector({
   }
 
   const previewVariant = selected ? getExplorerVariant(selected, previewFilled) : undefined;
+  const revisionHref = previewVariant?.href;
   const previewSrc = previewVariant?.src;
   const outline = previewVariant?.name === "line";
   const previewColor = /^#[\da-f]{6}$/i.test(previewTint) ? previewTint : "#f5f5f7";
@@ -93,6 +96,14 @@ export const ExplorerInspector = memo(function ExplorerInspector({
   const previewSvgSource = loadedSvg && loadedSvg.src === previewSrc ? loadedSvg.text : "";
   const needsSvg = previewCodeTab === "svg" || previewCodeTab === "datauri" ||
     (outline && Boolean(appearance.strokeLinecap));
+
+  // Inicia la precarga de la revisión elegida aunque su enlace esté fuera de la pantalla.
+  useEffect(() => {
+    if (revisionHref) {
+      router.prefetch(revisionHref);
+    }
+  }, [revisionHref, router]);
+
   useEffect(() => {
     if (!previewSrc || !needsSvg || previewSvgSource) {
       return;
@@ -468,7 +479,7 @@ export const ExplorerInspector = memo(function ExplorerInspector({
         <IntegrationCode tab={previewCodeTab} onTabChange={setPreviewCodeTab} code={snippet} />
       </div>
 
-      <Link className="explorer-detail-link" href={previewVariant.href}>
+      <Link className="explorer-detail-link" href={previewVariant.href} prefetch={true}>
         <span>
           Abrir ficha de revisión (sha256: {previewVariant.sha256})
         </span>

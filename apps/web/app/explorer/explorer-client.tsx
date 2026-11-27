@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import {
   useCallback,
   useDeferredValue,
@@ -45,6 +46,7 @@ export function ExplorerClient({
   initialGroup: string;
   initialSelectedId: string;
 }) {
+  const searchParams = useSearchParams();
   const [query, setQuery] = useState(initialQuery);
   const [activeGroup, setActiveGroup] = useState(initialGroup);
   const [filled, setFilled] = useState(false);
@@ -72,6 +74,18 @@ export function ExplorerClient({
   const [visibleCount, setVisibleCount] = useState(60);
   const loadMoreRef = useRef<HTMLDivElement>(null);
   const previousFilters = useRef({ query: initialQuery, group: initialGroup });
+
+  // Lee la URL vigente al volver por el historial o seguir un enlace con filtros.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.pathname !== "/explorer") {
+      return;
+    }
+
+    const group = url.searchParams.get("group");
+    setQuery(url.searchParams.get("q") ?? "");
+    setActiveGroup(group && groups.some(({ id }) => id === group) ? group : "");
+  }, [groups, searchParams]);
 
   useLayoutEffect(() => {
     const page = pageRef.current;
@@ -300,9 +314,37 @@ export function ExplorerClient({
     }
   }
 
+  /** Actualiza los filtros visibles y su URL sin recargar la galería ni añadir pasos al historial. */
+  function updateFilters(filters: { query?: string; group?: string }) {
+    const url = new URL(window.location.href);
+    const { query: nextQuery, group: nextGroup } = filters;
+
+    if (nextQuery !== undefined) {
+      setQuery(nextQuery);
+      if (nextQuery) {
+        url.searchParams.set("q", nextQuery);
+      } else {
+        url.searchParams.delete("q");
+      }
+    }
+
+    if (nextGroup !== undefined) {
+      setActiveGroup(nextGroup);
+      if (nextGroup) {
+        url.searchParams.set("group", nextGroup);
+      } else {
+        url.searchParams.delete("group");
+      }
+    }
+
+    if (url.href !== window.location.href) {
+      window.history.replaceState(null, "", url);
+    }
+  }
+
   /** Aplica una categoría y devuelve el foco al control que queda visible. */
   function selectGroup(group: string) {
-    setActiveGroup(group);
+    updateFilters({ group });
     setOpenMenu(null);
 
     if (optionsOpen) {
@@ -358,14 +400,14 @@ export function ExplorerClient({
             name="q"
             autoComplete="off"
             aria-label="Buscar iconos en la biblioteca"
-            onChange={(event) => setQuery(event.currentTarget.value)}
+            onChange={(event) => updateFilters({ query: event.currentTarget.value })}
           />
           {query && (
             <button
               type="button"
               className="explorer-search-clear"
               aria-label="Limpiar búsqueda"
-              onClick={() => setQuery("")}
+              onClick={() => updateFilters({ query: "" })}
             >
               <X />
             </button>
@@ -501,8 +543,7 @@ export function ExplorerClient({
               type="button"
               className="explorer-reset-btn"
               onClick={() => {
-                setQuery("");
-                setActiveGroup("");
+                updateFilters({ query: "", group: "" });
                 changeFilled(false);
                 setScale(24);
                 setTint("#868690");
@@ -551,10 +592,7 @@ export function ExplorerClient({
               <button
                 type="button"
                 className="secondary-action"
-                onClick={() => {
-                  setQuery("");
-                  setActiveGroup("");
-                }}
+                onClick={() => updateFilters({ query: "", group: "" })}
               >
                 Mostrar los {items.length} iconos
               </button>

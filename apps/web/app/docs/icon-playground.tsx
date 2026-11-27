@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Sun } from "@grausvera/unancha/icons";
 import { buildFrameworkSnippet } from "../lib/framework-code";
 import { defaultIconAppearance } from "../lib/icon-appearance";
@@ -17,6 +17,7 @@ const variants: { id: Variant; label: string }[] = [
 
 /** Actualiza el ejemplo del Sol y genera el mismo código de integración que el Explorador. */
 export function IconPlayground() {
+  const sizeId = useId();
   const [variant, setVariant] = useState<Variant>("line");
   const [size, setSize] = useState(32);
   const [color, setColor] = useState("#a78bfa");
@@ -49,10 +50,19 @@ export function IconPlayground() {
               </button>
             ))}
           </div>
-          <label className="docs-playground-size">
-            <span>Tamaño</span><output>{size} px</output>
-            <input type="range" min={16} max={96} value={size} onChange={(event) => setSize(event.currentTarget.valueAsNumber)} />
-          </label>
+          <div className="docs-playground-size">
+            <label htmlFor={sizeId}>Tamaño</label>
+            <output aria-hidden="true">{size} px</output>
+            <input
+              id={sizeId}
+              type="range"
+              min={16}
+              max={96}
+              value={size}
+              aria-valuetext={`${size} px`}
+              onChange={(event) => setSize(event.currentTarget.valueAsNumber)}
+            />
+          </div>
           <label className="docs-playground-color">
             <span>Color</span>
             <input type="color" value={color} onChange={(event) => setColor(event.currentTarget.value)} />

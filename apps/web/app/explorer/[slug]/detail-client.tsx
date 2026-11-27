@@ -642,7 +642,12 @@ export function ResourceDetailClient({
 
           <div className="detail-related-grid">
             {related.map((item) => (
-              <Link key={item.id} href={item.href} className="detail-related-card">
+              <Link
+                key={item.id}
+                href={item.href}
+                className="detail-related-card"
+                prefetch={true}
+              >
                 <span className="detail-related-stage">
                   <IconArtwork src={item.src} size={28} />
                 </span>
